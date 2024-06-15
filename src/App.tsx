@@ -18,22 +18,8 @@ function App() {
             </Suspense>
           }
         />
-        <Route
-          path="/menu"
-          element={
-            <Suspense fallback={<Loading />}>
-              <Menu />
-            </Suspense>
-          }
-        />
-        <Route
-          path="*"
-          element={
-            <Suspense fallback={<Loading />}>
-              <Error />
-            </Suspense>
-          }
-        />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );
