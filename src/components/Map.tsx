@@ -17,20 +17,18 @@ const Map: FC = () => {
     googleMapsApiKey: "AIzaSyAX0ePeW-44NQvzTRQR3QA8qFE_IziOnDw",
   });
 
-  const [map, setMap] = useState<google.maps.Map | null>(null);
   const [marker, setMarker] = useState<google.maps.Marker | null>(null);
 
-  const onLoad = useCallback((map: google.maps.Map) => {
-    console.log("Map loaded", map);
-    map.setZoom(19);
-    map.setCenter(center);
-    map.setMapTypeId("satellite");
-    setMap(map);
+  const onLoad = useCallback((mapInstance: google.maps.Map) => {
+    console.log("Map loaded", mapInstance);
+    mapInstance.setZoom(19);
+    mapInstance.setCenter(center);
+    mapInstance.setMapTypeId("satellite");
 
     // Create a new marker
     const newMarker = new google.maps.Marker({
       position: center,
-      map,
+      map: mapInstance,
       title: "Hello World!",
     });
     setMarker(newMarker);
@@ -38,7 +36,7 @@ const Map: FC = () => {
 
   const onUnmount = useCallback(() => {
     console.log("Map unmounted");
-    setMap(null);
+    setMarker(null);
   }, []);
 
   if (loadError) {
