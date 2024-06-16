@@ -8,7 +8,7 @@ const copyRightVariant = {
   animate: {
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.3,
       type: "linear",
     },
   },
@@ -24,7 +24,7 @@ const poweredByVariant = {
     y: 0,
     transition: {
       duration: 0.3,
-      delay: 0.5,
+      delay: 0.3,
       type: "linear",
     },
   },

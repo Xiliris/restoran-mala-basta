@@ -1,4 +1,5 @@
 import { FC, ReactNode } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Title from "../components/Title";
 import Split from "../components/Split";
@@ -11,7 +12,6 @@ const SplitVariant = {
     width: "100%",
     transition: {
       duration: 0.5,
-      delay: 0.5,
       type: "linear",
     },
   },
@@ -26,11 +26,14 @@ const titleVariant = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 1,
-      delay: 1,
+      duration: 0.5,
       type: "spring",
     },
   },
+};
+
+const isMobile = () => {
+  return window.innerWidth <= 768;
 };
 
 const itemAnimation = {
@@ -43,7 +46,7 @@ const itemAnimation = {
     opacity: 1,
     transition: {
       duration: 0.1,
-      delay: index * 0.1 + 1.5,
+      delay: isMobile() ? 0 : index * 0.05 + 1,
       type: "spring",
     },
   }),
@@ -114,24 +117,24 @@ const Contact: FC = () => {
             >
               Drustvene Mreže
             </Title>
-            <KontaktItem
+            <KontaktItemExternal
               href="https://www.facebook.com/restoranMalaBasta?locale=hr_HR"
               index={1}
             >
               Facebook
-            </KontaktItem>
-            <KontaktItem
+            </KontaktItemExternal>
+            <KontaktItemExternal
               href="https://www.instagram.com/official.restoranmalabasta/"
               index={2}
             >
               Instagram
-            </KontaktItem>
-            <KontaktItem
+            </KontaktItemExternal>
+            <KontaktItemExternal
               href="https://www.tripadvisor.com/Restaurant_Review-g294450-d8784750-Reviews-Mala_Basta-Sarajevo_Sarajevo_Canton_Federation_of_Bosnia_and_Herzegovina.html"
               index={3}
             >
               Tripadvisor
-            </KontaktItem>
+            </KontaktItemExternal>
           </ContactContainer>
           <ContactContainer>
             <Title
@@ -142,34 +145,22 @@ const Contact: FC = () => {
             >
               Meni
             </Title>
-            <KontaktItem
-              index={1}
-              href="/menu/?id=hladna-predjela"
-              navigate={true}
-            >
+            <KontaktItem index={1} to="/menu" navigate={true}>
               Hladna Predjela
             </KontaktItem>
-            <KontaktItem
-              index={2}
-              href="/menu/?id=jela-sa-zara"
-              navigate={true}
-            >
+            <KontaktItem index={2} to="/menu" navigate={true}>
               Jela sa Žara
             </KontaktItem>
-            <KontaktItem index={3} href="/menu/?id=vege-kutak" navigate={true}>
+            <KontaktItem index={3} to="/menu" navigate={true}>
               Vege Kutak
             </KontaktItem>
-            <KontaktItem
-              index={4}
-              href="/menu/?id=specijalitet-kuce"
-              navigate={true}
-            >
+            <KontaktItem index={4} to="/menu" navigate={true}>
               Specijalitet Kuće
             </KontaktItem>
-            <KontaktItem index={5} href="/menu/?id=salata" navigate={true}>
+            <KontaktItem index={5} to="/menu" navigate={true}>
               Salata
             </KontaktItem>
-            <KontaktItem index={6} href="/menu" navigate={true}>
+            <KontaktItem index={6} to="/menu" navigate={true}>
               Pogledajte još
             </KontaktItem>
           </ContactContainer>
@@ -184,6 +175,7 @@ const Contact: FC = () => {
     </section>
   );
 };
+
 interface ContactContainerProps {
   children: ReactNode;
 }
@@ -202,9 +194,15 @@ interface RadnoVrijemeProps {
 
 interface KontaktItemProps {
   children: ReactNode;
-  href?: string;
+  to: string;
   index?: number;
   navigate?: boolean;
+}
+
+interface KontaktItemExternalProps {
+  children: ReactNode;
+  href: string;
+  index?: number;
 }
 
 const ContactContainer: FC<ContactContainerProps> = ({ children }) => {
@@ -247,11 +245,28 @@ const RadnoVrijeme: FC<RadnoVrijemeProps> = ({ dan, vrijeme, index }) => {
   );
 };
 
-const KontaktItem: FC<KontaktItemProps> = ({
+const KontaktItem: FC<KontaktItemProps> = ({ to, children, index }) => {
+  return (
+    <Link to={to} className="mb-3 cursor-pointer">
+      <motion.p
+        variants={itemAnimation}
+        initial="initial"
+        whileInView="animate"
+        custom={{ index }}
+        viewport={{ once: true, amount: 0.5 }}
+        className="text-primary group"
+      >
+        <i className="fa-solid fa-angle-right text-emphasis group-hover:text-primary transition duration-300"></i>{" "}
+        {children}
+      </motion.p>
+    </Link>
+  );
+};
+
+const KontaktItemExternal: FC<KontaktItemExternalProps> = ({
   href,
   children,
   index,
-  navigate,
 }) => {
   return (
     <motion.a
@@ -261,7 +276,7 @@ const KontaktItem: FC<KontaktItemProps> = ({
       custom={{ index }}
       viewport={{ once: true, amount: 0.5 }}
       href={href}
-      target={navigate ? "_self" : "_blank"}
+      target={"_blank"}
       rel="noopener noreferrer"
       className="mb-3 cursor-pointer"
     >
