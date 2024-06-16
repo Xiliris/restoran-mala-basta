@@ -5,3 +5,5 @@
 ✅ Ubrzati Animacije
 🔜 ?? Navbar Static Color
 ✅ About sekcija centriranje i line-hight
+
+🔜 Location text padding fix

@@ -50,13 +50,13 @@ const Location: FC = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.5 }}
-          className="w-[50%] h-[15%] absolute bottom-0 left-0 z-10 bg-default-200 translate-x-1/2 rounded-3xl p-6 md:w-[100%] md:translate-x-0 translate-y-4"
+          className="w-[50%] h-[17%]  absolute bottom-0 left-0 z-10 bg-default-200 translate-x-1/2 rounded-3xl p-6 md:w-[100%] md:h-[21%] md:translate-x-0 translate-y-5"
         >
-          <div className="border-2 border-emphasis rounded-2xl border-b-0 flex justify-start items-center flex-col h-40">
+          <div className="border-2 border-emphasis rounded-2xl border-b-0 flex justify-start items-center flex-col h-[130%]">
             <Title className="text-center mb-3 inline bg-default-200 -translate-y-1/2 px-4 md:text-2xl md:mb-0">
               Lokacija
             </Title>
-            <p className="text-2xl text-primary text-center -translate-y-1/2 pb-2 sm:text-lg sm:pb-[0.40rem] lg:pb-0 ">
+            <p className="text-2xl text-primary text-center -translate-y-1/2  sm:text-lg md:m-auto">
               Bugojanska 5, Sarajevo
             </p>
           </div>
