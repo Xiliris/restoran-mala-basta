@@ -1,40 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bs">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta
+      name="description"
+      content="Restoran Mala Bašta Vam nudi širok asortiman jela i pića kao i mogućnost iznajmljivanja restorana. Muzika uživo svakog petka i subote, po potrebi i drugim danima za veća društva, Rezervišite svoje mjesto na vrijeme."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="rating" content="safe for kids" />
+    <meta name="copyright" content="Copyright 2024" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta
+      name="keywords"
+      content="Mala Bašta, restoran, Sarajevo, hrana, piće, muzika uživo, rezervacija, meni restorana"
+    />
+    <meta name="author" content="Mala Bašta" />
+    <meta name="geo.placename" content="Sarajevo, Bosnia and Herzegovina" />
+    <meta name="geo.position" content="43.8486; 18.3564" />
+    <meta name="ICBM" content="43.8486, 18.3564" />
 
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="canonical" href="https://www.example.com/page" />
+
+    <!-- Preconnect za vanjske resurse -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.example.com" />
+    <meta property="og:title" content="Mala Bašta | Restaurant in Sarajevo" />
+    <meta
+      property="og:description"
+      content="Restoran Mala Bašta Vam nudi širok asortiman jela i pića kao i mogućnost iznajmljivanja restorana. Muzika uživo svakog petka i subote, po potrebi i drugim danima za veća društva, Rezervišite svoje mjesto na vrijeme."
+    />
+    <meta property="og:image" content="https://www.example.com/logo.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.example.com" />
+    <meta
+      property="twitter:title"
+      content="Mala Bašta | Restaurant in Sarajevo"
+    />
+    <meta
+      property="twitter:description"
+      content="Restoran Mala Bašta Vam nudi širok asortiman jela i pića kao i mogućnost iznajmljivanja restorana. Muzika uživo svakog petka i subote, po potrebi i drugim danima za veća društva, Rezervišite svoje mjesto na vrijeme."
+    />
+    <meta property="twitter:image" content="https://www.example.com/logo.png" />
+
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
 
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
 
-    <title>Mala Bašta</title>
+    <title>
+      Mala Bašta - Vrhunski restoran u Sarajevu | Meni restorana, radno vrijeme,
+      kontakt
+    </title>
   </head>
   <body>
+    <!-- Glavni sadržaj -->
     <div id="root"></div>
+
+    <!-- JavaScript -->
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Mala Bašta",
+        "url": "https://www.example.com",
+        "image": "https://www.example.com/logo.png",
+        "telephone": "+387 63 711 520",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Bugojanska 5",
+          "addressLocality": "Sarajevo",
+          "addressRegion": "Federation of Bosnia and Herzegovina",
+          "postalCode": "71000",
+          "addressCountry": "Bosnia and Herzegovina"
+        },
+        "openingHours": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Monday",
+            "opens": "08:00",
+            "closes": "23:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Tuesday",
+            "opens": "08:00",
+            "closes": "23:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Wednesday",
+            "opens": "08:00",
+            "closes": "23:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Thursday",
+            "opens": "08:00",
+            "closes": "23:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Friday",
+            "opens": "12:00",
+            "closes": "02:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "14:00",
+            "closes": "02:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "Closed",
+            "closes": "Closed"
+          }
+        ],
+        "priceRange": "$$",
+        "servesCuisine": "International, Mediterranean",
+        "acceptsReservations": "true",
+        "menu": "https://www.example.com/menu",
+        "sameAs": [
+          "https://www.facebook.com/restoranMalaBasta",
+          "https://www.instagram.com/official.restoranmalabasta/",
+          "https://www.tripadvisor.com/Restaurant_Review-g294450-d8784750-Reviews-Mala_Basta-Sarajevo_Sarajevo_Canton_Federation_of_Bosnia_and_Herzegovina.html"
+        ]
+      }
+    </script>
+
+    <!-- OpenAI OT (Optical Transformer) -->
+    <script type="text/ot">
+      {
+        "OTType": "SEO",
+        "OTContent": {
+          "Title": "Mala Bašta - Vrhunski restoran u Sarajevu | Meni restorana, radno vrijeme, kontakt",
+          "Description": "Otkrijte Mala Bašta, poznati restoran u Sarajevu koji nudi vrhunsko iskustvo u ugostiteljstvu. istražite naš meni, radno vrijeme i kontakt detalje. Posjetite nas danas!",
+          "Keywords": ["Mala Bašta", "restoran Sarajevo", "ugostiteljstvo Sarajevo", "meni restorana", "radno vrijeme restorana", "kontakt Mala Bašta"],
+          "CanonicalURL": "https://www.example.com/page"
+        }
+      }
+    </script>
   </body>
 </html>
