@@ -23,7 +23,6 @@ const Map: FC = () => {
     console.log("Map loaded", mapInstance);
     mapInstance.setZoom(19);
     mapInstance.setCenter(center);
-    mapInstance.setMapTypeId("satellite");
 
     // Create a new marker
     const newMarker = new google.maps.Marker({

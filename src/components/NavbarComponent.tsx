@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import { motion } from "framer-motion";
 import Split from "../components/Split";
+import { Link } from "react-router-dom";
 
 const sidebarVariants = {
   hidden: {
@@ -26,12 +27,12 @@ const Navbar: FC = () => {
   return (
     <>
       <motion.nav className="w-screen fixed z-50 bg-gradient-to-b from-black to-transparent backdrop-blur-sm">
-        <div className="flex justify-between items-center py-10 w-[80vw] m-auto">
-          <a className="z-50" href="/">
+        <div className="flex justify-between items-center py-10 w-[80vw] m-auto xl:w-[90vw]">
+          <Link to="/" className="z-50">
             <h2 className="text-primary text-logo text-2xl cursor-pointer translate-y-1 hover:text-emphasis transition-all duration-300 ease-in-out">
               Mala Bašta
             </h2>
-          </a>
+          </Link>
           <i
             className="fa-solid fa-bars-staggered text-2xl text-primary cursor-pointer z-50 hover:text-emphasis transition-all duration-300 ease-in-out"
             onClick={() => toggleSidebarHandler()}
@@ -47,11 +48,6 @@ const Navbar: FC = () => {
             <Split icon={true} />
             <div className="h-screen w-full grid grid-cols-2 justify-start mt-5">
               <div className="flex flex-col justify-start items-start gap-4">
-                <AsideItem
-                  href="/"
-                  name="Početna"
-                  handleClick={() => toggleSidebarHandler()}
-                />
                 <AsideItem
                   href="/menu/#hladna-predjela"
                   name="Hladna Predjela"

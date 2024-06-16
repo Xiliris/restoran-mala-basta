@@ -1,10 +1,13 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, useEffect } from "react";
 import Navbar from "../components/NavbarComponent";
 import Title from "../components/Title";
 import Split from "../components/Split";
 import Footer from "../pages/Footer";
 
 const Menu: FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main className="w-screen h-auto flex flex-col justify-start items-center">
       <Navbar />
@@ -45,7 +48,7 @@ const Menu: FC = () => {
           <MenuItem name="Dnevna čorba" price={4} />
           <MenuItem name="Teleća čorba" price={6} />
           <MenuItem name="Begova čorba" price={5} />
-          <MenuItem name="Spinat krem čorba" price={7} />
+          <MenuItem name="Špinat krem čorba" price={7} />
           <MenuItem name="Paradajz čorba" price={5} />
         </MenuContainer>
 
@@ -257,10 +260,12 @@ const MenuContainer: FC<MenuContainerProps> = ({
 const MenuItem: FC<MenuItemProps> = ({ name, price, info }) => {
   return (
     <div className="flex justify-between items-center my-2">
-      <p className={`text-primary text-md md:text-sm w-[50%]`}>{name}</p>
+      <p className={`text-primary text-md md:text-md w-[50%]`}>{name}</p>
       <div className="flex justify-end items-center w-[40%]">
         {info && (
-          <p className="text-primary text-md md:text-sm mr-auto">{info}</p>
+          <p className="text-primary text-md mr-auto leading-5 md:text-md md:leading-relaxed">
+            {info}
+          </p>
         )}
         <p className="text-primary text-md md:text-sm">{price.toFixed(2)} KM</p>
       </div>

@@ -1,4 +1,5 @@
 import { FC, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, useScroll } from "framer-motion";
 import Split from "../components/Split";
 
@@ -100,12 +101,12 @@ const Navbar: FC = () => {
                 name="O nama"
                 handleClick={() => toggleSidebarHandler()}
               />
-              <AsideItem
+              <RedirectItem
                 href="/menu"
                 name="Meni"
                 handleClick={() => toggleSidebarHandler()}
               />
-              <AsideItem
+              <RedirectItem
                 href="#location"
                 name="Lokacija"
                 handleClick={() => toggleSidebarHandler()}
@@ -155,6 +156,14 @@ const AsideItem: FC<AsideItemProps> = ({ href, name, handleClick }) => {
         {name}
       </a>
     </li>
+  );
+};
+
+const RedirectItem: FC<AsideItemProps> = ({ href, name, handleClick }) => {
+  return (
+    <Link to={href} onClick={handleClick}>
+      <li className="text-primary text-xl">{name}</li>
+    </Link>
   );
 };
 

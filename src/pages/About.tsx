@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Title from "../components/Title";
 import Button from "../components/Button";
+import ResetButton from "../components/ResetButton";
 import { Variants, motion } from "framer-motion";
 
 const SplitVariant = {
@@ -10,7 +11,7 @@ const SplitVariant = {
   animate: {
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.3,
       type: "linear",
     },
   },
@@ -26,7 +27,7 @@ const titleVariant = {
     opacity: 1,
     transition: {
       duration: 1,
-      delay: 0.5,
+      delay: 0.3,
       type: "spring",
     },
   },
@@ -41,8 +42,8 @@ const textVariant = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 1,
-      delay: 1,
+      duration: 0.5,
+      delay: 0.5,
       type: "spring",
     },
   },
@@ -50,7 +51,6 @@ const textVariant = {
 
 interface ButtonVariantProps {
   index: number;
-  startDelay: number;
 }
 
 const ButtonVariant = {
@@ -58,12 +58,12 @@ const ButtonVariant = {
     y: 20,
     opacity: 0,
   },
-  animate: ({ index, startDelay }: ButtonVariantProps) => ({
+  animate: ({ index }: ButtonVariantProps) => ({
     y: 0,
     opacity: 1,
     transition: {
-      duration: 1,
-      delay: index * 0.3 + startDelay,
+      duration: 0.2,
+      delay: index * 0.2,
       type: "spring",
     },
   }),
@@ -73,11 +73,11 @@ const articleVariants = {
   initial: {
     opacity: 0,
   },
-  animate: ({ index, startDelay }: ButtonVariantProps) => ({
+  animate: ({ index }: ButtonVariantProps) => ({
     opacity: 1,
     transition: {
-      duration: 1,
-      delay: index * 0.3 + startDelay,
+      duration: 0.1,
+      delay: index * 0.1,
       type: "spring",
     },
   }),
@@ -131,27 +131,27 @@ const About: FC = () => {
             variant={ButtonVariant}
             initial="initial"
             whileInView="animate"
-            custom={{ index: 1, startDelay: 0.5 }}
+            custom={{ index: 1 }}
             className="mt-7"
             href="#contact"
           >
             Kontakt
           </Button>
-          <Button
+          <ResetButton
+            href="/menu"
             variant={ButtonVariant}
             initial="initial"
             whileInView="animate"
-            custom={{ index: 2, startDelay: 0.5 }}
-            className="mt-7 mx-5"
-            href="/menu"
+            custom={{ index: 2 }}
+            className="mt-14 mx-5"
           >
             Meni
-          </Button>
+          </ResetButton>
           <Button
             variant={ButtonVariant}
             initial="initial"
             whileInView="animate"
-            custom={{ index: 3, startDelay: 0.5 }}
+            custom={{ index: 3 }}
             className="mt-7"
             href="#location"
           >
@@ -163,7 +163,7 @@ const About: FC = () => {
             variants={articleVariants}
             initial="initial"
             whileInView="animate"
-            custom={{ index: 1, startDelay: 0.5 }}
+            custom={{ index: 1 }}
             icon="fa-solid fa-bowl-food"
             title="Ukusna Jela"
             description="Naši kuhari strastveno pripremaju izvanredno ukusnu hranu, pažljivo birajući najkvalitetnije sastojke."
@@ -172,7 +172,7 @@ const About: FC = () => {
             variants={articleVariants}
             initial="initial"
             whileInView="animate"
-            custom={{ index: 2, startDelay: 0.5 }}
+            custom={{ index: 2 }}
             icon="fa-solid fa-hand-holding-droplet"
             title="Najbolja Usluga"
             description="Naš tim vrhunskih stručnjaka osiguraće vam brzu i visokokvalitetnu uslugu."
@@ -182,7 +182,7 @@ const About: FC = () => {
             variants={articleVariants}
             initial="initial"
             whileInView="animate"
-            custom={{ index: 3, startDelay: 0.5 }}
+            custom={{ index: 3 }}
             icon="fa-solid fa-music"
             title="Muzika Uživo"
             description="Svaki petak i subotu možete uživati u muzici uživo nastupu našeg najboljeg benda."
@@ -192,7 +192,7 @@ const About: FC = () => {
             variants={articleVariants}
             initial="initial"
             whileInView="animate"
-            custom={{ index: 4, startDelay: 0.5 }}
+            custom={{ index: 4 }}
             icon="fa-solid fa-smoking"
             title="Zona za Pušače i Nepušače"
             description="Prostor posebno prilagođen za pušače i nepušače, osiguravajući udobnost i zadovoljstvo svim gostima."
@@ -246,10 +246,10 @@ const AboutItem: FC<AboutItemProps> = ({
       viewport={{ once: true, amount: 0.5 }}
       className={`flex justify-start items-center flex-col text-center bg-default-200 p-4 rounded-3xl ${className} shadow-md min-h-72`}
     >
-      <div className="border-2 border-emphasis p-4 rounded-xl h-[100%]">
+      <div className="border-2 border-emphasis p-4 rounded-xl h-[100%] flex flex-col justify-center items-center">
         <i className={`text-5xl text-emphasis ${icon}`}></i>
         <h3 className="text-primary text-xl mt-6 font-bold">{title}</h3>
-        <p className="text-primary mt-4">{description}</p>
+        <p className="text-primary mt-4 leading-6">{description}</p>
       </div>
     </motion.article>
   );
