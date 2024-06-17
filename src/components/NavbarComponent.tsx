@@ -43,10 +43,13 @@ const Navbar: FC = () => {
             variants={sidebarVariants}
             initial="hidden"
             animate={toggleSidebar}
-            className={`flex flex-col items-start justify-start fixed top-0 right-0 h-screen w-screen bg-default-200 z-30 p-10 pt-24`}
+            className={`flex flex-col items-start justify-start overflow-hidden fixed top-0 right-0 h-screen w-screen bg-default-200 z-30 p-10 pt-24`}
           >
             <Split icon={true} />
             <div className="h-screen w-full grid grid-cols-2 justify-start mt-5">
+              <h3 className="text-emphasis text-logo absolute scale-[30] brightness-[0.2] -z-10 -rotate-12 top-1/2 left-1/2 md:scale-[10]">
+                Mala Bašta
+              </h3>
               <div className="flex flex-col justify-start items-start gap-4">
                 <AsideItem
                   href="/menu/#hladna-predjela"
@@ -139,13 +142,13 @@ const Navbar: FC = () => {
             </div>
             <div className="m-auto flex justify-between items-center w-[20%] mb-10 md:w-[40%] md:mb-3">
               <a href="https://www.facebook.com/restoranMalaBasta?locale=hr_HR">
-                <i className="fa-brands fa-facebook text-primary text-4xl md:text-2xl"></i>
+                <i className="fa-brands fa-facebook text-primary text-4xl md:text-2xl hover:scale-110 hover:text-emphasis transition-all duration-300 ease-in-out"></i>
               </a>
               <a href="tel: +387 63 711 520">
-                <i className="fa-solid fa-phone text-primary text-4xl md:text-2xl"></i>
+                <i className="fa-solid fa-phone text-primary text-4xl md:text-2xl hover:scale-110 hover:text-emphasis transition-all duration-300 ease-in-out"></i>
               </a>
               <a href="https://www.instagram.com/official.restoranmalabasta/">
-                <i className="fa-brands fa-instagram text-primary text-4xl md:text-2xl"></i>
+                <i className="fa-brands fa-instagram text-primary text-4xl md:text-2xl hover:scale-110 hover:text-emphasis transition-all duration-300 ease-in-out"></i>
               </a>
             </div>
             <Split />
@@ -190,7 +193,7 @@ const AsideItem: FC<AsideItemProps> = ({ href, name, handleClick }) => {
   };
 
   return (
-    <li className="text-primary text-xl md:text-sm">
+    <li className="text-primary text-xl md:text-sm hover:scale-110 hover:text-emphasis transition-all duration-300 ease-in-out">
       <a href={href} onClick={handleClickInternal}>
         {name}
       </a>

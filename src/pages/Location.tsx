@@ -32,7 +32,7 @@ const locationVariant = {
 const Location: FC = () => {
   return (
     <section
-      className="flex w-screen h-auto pt-20 bg-default-200"
+      className="flex w-screen h-auto pt-20 bg-default-200 justify-center items-center flex-col"
       id="location"
     >
       <motion.div
@@ -50,15 +50,20 @@ const Location: FC = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.5 }}
-          className="w-[50%] h-[17%]  absolute bottom-0 left-0 z-10 bg-default-200 translate-x-1/2 rounded-3xl p-6 md:w-[100%] md:h-[21%] md:translate-x-0 translate-y-5"
+          className="w-full absolute bottom-0 left-0 flex justify-center items-center"
         >
-          <div className="border-2 border-emphasis rounded-2xl border-b-0 flex justify-start items-center flex-col h-[130%]">
-            <Title className="text-center mb-3 inline bg-default-200 -translate-y-1/2 px-4 md:text-2xl md:mb-0">
-              Lokacija
-            </Title>
-            <p className="text-2xl text-primary text-center -translate-y-1/2  sm:text-lg md:m-auto">
-              Bugojanska 5, Sarajevo
-            </p>
+          <div className="bg-default-200 p-8 rounded-lg translate-y-1">
+            <div className="relative">
+              <div className="rounded-lg border-2 border-emphasis absolute w-full h-[20vh]"></div>
+              <div className="flex flex-col justify-between items-center px-10">
+                <Title className="text-center mb-3 inline bg-default-200 px-4 md:text-2xl md:mb-0 -translate-y-1/2">
+                  Lokacija
+                </Title>
+                <p className="text-2xl text-primary text-center sm:text-lg md:m-auto">
+                  Bugojanska 5, Sarajevo
+                </p>
+              </div>
+            </div>
           </div>
         </motion.div>
       </motion.div>

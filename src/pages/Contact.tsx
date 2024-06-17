@@ -56,7 +56,7 @@ const Contact: FC = () => {
   return (
     <section className="flex w-screen mt-20">
       <div
-        className="w-[80vw] h-[50vh] m-auto lg:h-[100%] flex flex-col justify-center items-center"
+        className="w-[80vw]  m-auto lg:h-[100%] flex flex-col justify-center items-center"
         id="contact"
       >
         <Title
@@ -74,7 +74,7 @@ const Contact: FC = () => {
           icon={true}
           className="mt-5 mb-5"
         />
-        <div className="w-[100%] flex justify-between lg:grid lg:grid-cols-2 lg:gap-5 md:grid-cols-1">
+        <div className="w-[100%] flex justify-between xl:grid xl:gap-5 xl:grid-cols-2 sm:grid-cols-1">
           <ContactContainer>
             <Title
               variants={titleVariant}
@@ -207,7 +207,7 @@ interface KontaktItemExternalProps {
 
 const ContactContainer: FC<ContactContainerProps> = ({ children }) => {
   return (
-    <div className="flex flex-col justify-start items-start h-[100%] text-lg md:mb-10">
+    <div className="flex flex-col justify-start items-start text-lg md:mb-10">
       {children}
     </div>
   );

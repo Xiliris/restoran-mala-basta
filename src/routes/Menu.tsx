@@ -78,7 +78,7 @@ const Menu: FC = () => {
           <MenuItem name="Teleće pečenje (Sač)" price={25} />
           <MenuItem name="Teleći kotleti" price={33} />
           <MenuItem name="Biftek sa žara" price={19} />
-          <MenuItem name="Biftek ala Dada" price={22} />
+          <MenuItem name="Biftek ala Dado" price={22} />
           <MenuItem name="Pljeskavica" price={12} info="200g" />
           <MenuItem name="Kiseli kupus" price={5} />
           <MenuItem
@@ -146,7 +146,7 @@ const Menu: FC = () => {
           <MenuItem name="Loza" price={3} info="(0.03)" />
           <MenuItem name="Travarica" price={3} info="(0.03)" />
           <MenuItem name="Višnjevača" price={4} info="(0.03)" />
-          <MenuItem name="Dunja" price={3.5} info="(0.93)" />
+          <MenuItem name="Dunja" price={3.5} info="(0.03)" />
           <MenuItem name="Kajsija" price={3.5} info="(0.03)" />
           <MenuItem name="Orahovača" price={4} info="(0.03)" />
           <MenuItem name="Viljamovka" price={5} info="(0.03)" />
@@ -196,12 +196,12 @@ const Menu: FC = () => {
         </MenuContainer>
 
         <MenuContainer title="Topli Napici" className="mt-44" id="topli-napici">
-          <MenuItem name="Čaj (imun, med)" price={2.5} />
+          <MenuItem name="Čaj (limun, med)" price={2.5} />
           <MenuItem name="Kafa" price={2} />
           <MenuItem name="Kafa sa mlijekom (mala)" price={2.5} />
           <MenuItem name="Kafa sa mlijekom (velika)" price={3} />
           <MenuItem name="Cappuccino" price={3} />
-          <MenuItem name="Ness u okusima" price={3.5} />
+          <MenuItem name="Ness sa okusima" price={3.5} />
           <MenuItem name="Topla čokolada" price={4} />
         </MenuContainer>
 
@@ -216,10 +216,10 @@ const Menu: FC = () => {
           <MenuItem name="Orangina" price={4} />
           <MenuItem name="Cijeđena narandža" price={5} />
           <MenuItem name="Kisela voda" price={2.5} />
-          <MenuItem name="Kisela voda (1l)" price={7} />
+          <MenuItem name="Kisela voda (1.00)" price={7} />
           <MenuItem name="Sensation" price={2.5} />
           <MenuItem name="Prirodna voda" price={2.5} />
-          <MenuItem name="Prirodna voda (0.75l)" price={4} />
+          <MenuItem name="Prirodna voda (0.75)" price={4} />
           <MenuItem name="Red Bull" price={5} />
         </MenuContainer>
       </div>
