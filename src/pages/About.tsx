@@ -86,8 +86,8 @@ const articleVariants = {
 const About: FC = () => {
   return (
     <section
-      className="w-screen h-screen flex flex-col justify-center items-center relative py-32
-        lg:h-auto
+      className="w-screen h-auto flex flex-col justify-center items-center relative py-32
+      min-h-screen
       "
       id="about"
     >
@@ -97,7 +97,7 @@ const About: FC = () => {
             variants={titleVariant}
             initial="initial"
             whileInView="animate"
-            className="text-primary md:text-3xl md:mb-3"
+            className="text-primary md:text-3xl mb-4"
           >
             Dobrodošli u Malu Baštu
           </Title>
@@ -127,38 +127,40 @@ const About: FC = () => {
             rezervirati svoje mjesto na vrijeme i pridružite nam se u ugodnom
             ambijentu restorana Mala Bašta!
           </motion.p>
-          <Button
-            variant={ButtonVariant}
-            initial="initial"
-            whileInView="animate"
-            custom={{ index: 1 }}
-            className="mt-7"
-            href="#contact"
-          >
-            Kontakt
-          </Button>
-          <ResetButton
-            href="/menu"
-            variant={ButtonVariant}
-            initial="initial"
-            whileInView="animate"
-            custom={{ index: 2 }}
-            className="mt-14 mx-5"
-          >
-            Meni
-          </ResetButton>
-          <Button
-            variant={ButtonVariant}
-            initial="initial"
-            whileInView="animate"
-            custom={{ index: 3 }}
-            className="mt-7"
-            href="#location"
-          >
-            Lokacija
-          </Button>
+          <div className="mt-9 flex justify-center items-center gap-5 md:gap-3">
+            <Button
+              variant={ButtonVariant}
+              initial="initial"
+              whileInView="animate"
+              custom={{ index: 1 }}
+              className=""
+              href="#contact"
+            >
+              Kontakt
+            </Button>
+            <ResetButton
+              href="/menu"
+              variant={ButtonVariant}
+              initial="initial"
+              whileInView="animate"
+              custom={{ index: 2 }}
+              className=""
+            >
+              Meni
+            </ResetButton>
+            <Button
+              variant={ButtonVariant}
+              initial="initial"
+              whileInView="animate"
+              custom={{ index: 3 }}
+              className=""
+              href="#location"
+            >
+              Lokacija
+            </Button>
+          </div>
         </div>
-        <div className="w-[70vw] grid grid-cols-4 gap-5 mt-24 m-auto lg:grid-cols-2 md:grid-cols-1">
+        <div className="w-[70vw] grid grid-cols-4 gap-5 mt-24 m-auto md:grid-cols-1 xl:grid-cols-2">
           <AboutItem
             variants={articleVariants}
             initial="initial"
@@ -176,7 +178,7 @@ const About: FC = () => {
             icon="fa-solid fa-hand-holding-droplet"
             title="Najbolja Usluga"
             description="Naš tim vrhunskih stručnjaka osiguraće vam brzu i visokokvalitetnu uslugu."
-            className="translate-y-8 lg:translate-y-0"
+            className="translate-y-8 xl:translate-y-0"
           />{" "}
           <AboutItem
             variants={articleVariants}
@@ -186,7 +188,7 @@ const About: FC = () => {
             icon="fa-solid fa-music"
             title="Muzika Uživo"
             description="Svaki petak i subotu možete uživati u muzici uživo nastupu našeg najboljeg benda."
-            className="translate-y-8 lg:translate-y-0"
+            className="translate-y-8 xl:translate-y-0"
           />
           <AboutItem
             variants={articleVariants}
