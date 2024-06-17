@@ -14,14 +14,14 @@ const Menu: FC = () => {
       <div className="grid grid-cols-2 mx-auto gap-x-[10vw] xl:grid-cols-1">
         <MenuContainer
           title="Hladna Predjela"
-          className="mt-40"
+          className="mt-44"
           id="hladna-predjela"
         >
           <MenuItem name="Carpaccio sa Lososom" price={20} info="100g" />
           <MenuItem name="Tuna" price={30} info="280g" />
           <MenuItem name="Carpaccio sa biftekom" price={20} info="100g" />
           <MenuItem name="Suho meso-prva klasa" price={10} info="100g" />
-          <MenuItem name="Sudzuk/kulen" price={7} info="100g" />
+          <MenuItem name="Sudžuk/kulen" price={7} info="100g" />
           <MenuItem
             name="Livanjski sir u maslinovom ulju"
             price={10}
