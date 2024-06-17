@@ -69,7 +69,9 @@ select {
   font: inherit;
   -webkit-tap-highlight-color: transparent;
 }
-
+a,
+button,
+p,
 h1,
 h2,
 h3,
@@ -77,7 +79,7 @@ h4,
 h5,
 h6 {
   &::selection {
-    background: none;
+    @apply bg-hover-100;
   }
 }
 
