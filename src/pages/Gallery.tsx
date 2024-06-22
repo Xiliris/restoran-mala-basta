@@ -11,7 +11,7 @@ import Img6 from "../assets/imgs (6).jpg";
 import Img7 from "../assets/imgs (7).jpg";
 import Img8 from "../assets/imgs (8).jpg";
 
-const imageClass = "w-96 h-96 object-cover rounded-lg";
+const imageClass = "w-full h-96 object-cover rounded-lg";
 
 interface GalleryImageProps {
   src: string;
@@ -50,34 +50,6 @@ const imageVariants = {
     },
   },
 };
-
-const GalleryImage: FC<GalleryImageProps> = ({ src, alt, index }) => {
-  return (
-    <motion.img
-      variants={imageVariants}
-      initial="initial"
-      whileInView="animate"
-      whileHover="hover"
-      exit="exit"
-      viewport={{ once: true, amount: 0.5 }}
-      custom={{ index }}
-      src={src}
-      alt={alt}
-      className={imageClass}
-    />
-  );
-};
-
-const images = [
-  { src: Img1, alt: "img1" },
-  { src: Img2, alt: "img2" },
-  { src: Img3, alt: "img3" },
-  { src: Img4, alt: "img4" },
-  { src: Img5, alt: "img5" },
-  { src: Img6, alt: "img6" },
-  { src: Img7, alt: "img7" },
-  { src: Img8, alt: "img8" },
-];
 
 const Gallery: FC = () => {
   const [showAll, setShowAll] = useState(true);
@@ -130,5 +102,33 @@ const Gallery: FC = () => {
     </section>
   );
 };
+
+const GalleryImage: FC<GalleryImageProps> = ({ src, alt, index }) => {
+  return (
+    <motion.img
+      variants={imageVariants}
+      initial="initial"
+      whileInView="animate"
+      whileHover="hover"
+      exit="exit"
+      viewport={{ once: true, amount: 0.5 }}
+      custom={{ index }}
+      src={src}
+      alt={alt}
+      className={imageClass}
+    />
+  );
+};
+
+const images = [
+  { src: Img1, alt: "img1" },
+  { src: Img2, alt: "img2" },
+  { src: Img3, alt: "img3" },
+  { src: Img4, alt: "img4" },
+  { src: Img5, alt: "img5" },
+  { src: Img6, alt: "img6" },
+  { src: Img7, alt: "img7" },
+  { src: Img8, alt: "img8" },
+];
 
 export default Gallery;
