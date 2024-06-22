@@ -74,28 +74,22 @@ const Menu: FC = () => {
 
         <MenuContainer title="Jela sa Žara" className="mt-44" id="jela-sa-zara">
           <MenuItem name="Pileći fileti sa žara" price={12} />
-          <MenuItem name="Pureća šnicla" price={19} info="250g" />
-          <MenuItem name="Teleće pečenje (Sač)" price={25} />
+          <MenuItem name="Pureća šnicla" price={19} />
           <MenuItem name="Teleći kotleti" price={33} />
           <MenuItem name="Biftek sa žara" price={19} />
           <MenuItem name="Biftek ala Dado" price={22} />
-          <MenuItem name="Pljeskavica" price={12} info="200g" />
+          <MenuItem name="Pljeskavica" price={12} />
           <MenuItem name="Kiseli kupus" price={5} />
           <MenuItem
             name="Biftek na užarenoj ploči sa pekarskim krompirom"
             price={32}
-            info="250g"
           />
-          <MenuItem
-            name="Tagliata Grano Padano na rukoli"
-            price={35}
-            info="250g"
-          />
-          <MenuItem name="Teleća koljenica" price={60} info="2.50kg" />
-          <MenuItem name="Biftek u Gorgonzola sosu" price={35} info="250g" />
-          <MenuItem name="Green Pepper biftek" price={35} info="250g" />
-          <MenuItem name="Ramstek ala Dado" price={25} info="300g" />
-          <MenuItem name="Biftek sa začinskim biljem" price={33} info="250g" />
+          <MenuItem name="Tagliata Grano Padano na rukoli" price={35} />
+          <MenuItem name="Teleća koljenica" price={60} />
+          <MenuItem name="Biftek u Gorgonzola sosu" price={35} />
+          <MenuItem name="Green Pepper biftek" price={35} />
+          <MenuItem name="Ramstek ala Dado" price={25} />
+          <MenuItem name="Biftek sa začinskim biljem" price={33} />
         </MenuContainer>
 
         <MenuContainer title="Salate" className="mt-44" id="salata">
