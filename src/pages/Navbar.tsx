@@ -109,6 +109,11 @@ const Navbar: FC = () => {
                 name="O nama"
                 handleClick={closeSidebarHandler}
               />
+              <AsideItem
+                href="#gallery"
+                name="Galerija"
+                handleClick={closeSidebarHandler}
+              />
               <RedirectItem
                 href="/menu"
                 name="Meni"
