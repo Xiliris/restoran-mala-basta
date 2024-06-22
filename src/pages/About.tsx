@@ -120,12 +120,12 @@ const About: FC = () => {
             className="text-xl text-primary md:text-md"
             style={{ lineHeight: "1.5rem" }}
           >
-            Restoran Mala bašta je mali raj u Sarajevu. Bašta našeg restorana je
+            Restoran Mala Bašta je mali raj u Sarajevu. Bašta našeg restorana je
             sa vama dijelila najbitnije momente u vašim porodicama. Zajedno smo
             se smijali, pjevali, plakali... Zajedno smo ostvarili lijepe priče i
             još ljepše uspomene. Osnovan 2005. godine kao "The Family Club",
             Mala bašta od 2021. godine se kruniše novim vlasnikom, poznatim
-            sarajevskim kuharom,započinjući jednu novu gastronomsku priču čiji
+            sarajevskim kuharom, započinjući jednu novu gastronomsku priču čiji
             je jedini cilj zadovoljan posjetilac.
           </motion.p>
           <div className="mt-9 flex justify-center items-center gap-5 md:gap-3">

@@ -115,7 +115,7 @@ const Contact: FC = () => {
               whileInView="animate"
               className="text-left mb-4"
             >
-              Drustvene Mreže
+              Društvene Mreže
             </Title>
             <KontaktItemExternal
               href="https://www.facebook.com/restoranMalaBasta?locale=hr_HR"
