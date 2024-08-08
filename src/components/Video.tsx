@@ -18,6 +18,7 @@ const Video: FC = () => {
       autoPlay
       muted
       loop
+      disablePictureInPicture
       aria-hidden="true"
       className="absolute inset-0 w-full h-full object-cover z-[-100] brightness-50"
     >
@@ -27,7 +28,7 @@ const Video: FC = () => {
     <img
       src={FallbackImage}
       alt="Fallback"
-      className="absolute inset-0 w-full h-full object-cover z-[-100]"
+      className="absolute inset-0 w-full h-full object-cover z-[-100] brightness-50"
     />
   );
 };
