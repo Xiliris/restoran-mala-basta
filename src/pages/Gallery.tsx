@@ -115,20 +115,24 @@ const GalleryImage: FC<GalleryImageProps> = ({ src, alt, index }) => {
       custom={{ index }}
       src={src}
       alt={alt}
+      title={alt}
+      loading="lazy"
+      width={300}
+      height={400}
       className={imageClass}
     />
   );
 };
 
 const images = [
-  { src: Img1, alt: "img1" },
-  { src: Img2, alt: "img2" },
-  { src: Img3, alt: "img3" },
-  { src: Img4, alt: "img4" },
-  { src: Img5, alt: "img5" },
-  { src: Img6, alt: "img6" },
-  { src: Img7, alt: "img7" },
-  { src: Img8, alt: "img8" },
+  { src: Img1, alt: "image1" },
+  { src: Img2, alt: "image2" },
+  { src: Img3, alt: "image3" },
+  { src: Img4, alt: "image4" },
+  { src: Img5, alt: "image5" },
+  { src: Img6, alt: "image6" },
+  { src: Img7, alt: "image7" },
+  { src: Img8, alt: "image8" },
 ];
 
 export default Gallery;

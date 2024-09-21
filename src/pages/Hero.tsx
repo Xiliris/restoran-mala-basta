@@ -107,29 +107,30 @@ const Hero: FC = () => {
         className="w-screen h-screen bg-black absolute -z-10"
       ></motion.div>
       <div className="inline-flex justify-center items-center flex-col h-screen m-auto">
-        <motion.h2
-          variants={titleVariant}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, amount: 0.5 }}
-          className="text-logo text-emphasis text-9xl translate-y-11 -z-[1] -rotate-6 
-          md:text-[5rem] md:translate-y-8 
-          sm:text-[3rem] sm:translate-y-4
+        <motion.h1 
+        variants={titleVariant}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.5 }}
+        className="flex justify-center items-center flex-col">
+
+        <span
+          className="      text-logo text-emphasis text-9xl translate-y-11 -z-[1] -rotate-6
+      md:text-[5rem] md:translate-y-8 
+      sm:text-[3rem] sm:translate-y-4
+      sm:-rotate-3
         "
         >
-          Restoran
-        </motion.h2>
-        <motion.h1
-          variants={titleVariant}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, amount: 0.5 }}
+          Restoran <br />
+        </span>
+        <span
           className="text-logo text-primary text-[9rem] 
         md:text-8xl
         sm:text-6xl
         "
         >
           Mala Bašta
+        </span>
         </motion.h1>
         <motion.div
           variants={SplitVariant}
