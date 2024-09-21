@@ -251,7 +251,7 @@ const AboutItem: FC<AboutItemProps> = ({
     >
       <div className="border-2 border-emphasis p-4 rounded-xl h-[100%] flex flex-col justify-center items-center">
         <i className={`text-5xl text-emphasis ${icon}`}></i>
-        <h3 className="text-primary text-xl mt-6 font-bold">{title}</h3>
+        <h2 className="text-primary text-xl mt-6 font-bold">{title}</h2>
         <p className="text-primary mt-4 leading-6">{description}</p>
       </div>
     </motion.article>

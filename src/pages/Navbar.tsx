@@ -78,9 +78,9 @@ const Navbar: FC = () => {
       >
         <div className="flex justify-between items-center py-10 w-[80vw] m-auto">
           <a className="z-50" href="#hero" onClick={closeSidebarHandler}>
-            <h2 className="text-primary text-logo text-2xl cursor-pointer translate-y-1 hover:text-emphasis transition-all duration-300 ease-in-out">
+            <p className="text-primary text-logo text-2xl cursor-pointer translate-y-1 hover:text-emphasis transition-all duration-300 ease-in-out">
               Mala Bašta
-            </h2>
+            </p>
           </a>
           <i
             className="fa-solid fa-bars-staggered text-2xl text-primary cursor-pointer z-50 hover:text-emphasis transition-all duration-300 ease-in-out"
@@ -96,9 +96,9 @@ const Navbar: FC = () => {
           >
             <Split icon={true} />
             <div className="h-screen w-full flex flex-col items-center justify-start gap-6 mt-4 relative">
-              <h3 className="text-emphasis text-logo absolute scale-[30] brightness-[0.2] -z-10 -rotate-12 top-1/2 left-1/2 md:scale-[10]">
+              <p className="text-emphasis text-logo absolute scale-[30] brightness-[0.2] -z-10 -rotate-12 top-1/2 left-1/2 md:scale-[10]">
                 Mala Bašta
-              </h3>
+              </p>
               <AsideItem
                 href="#hero"
                 name="Početna"
@@ -131,14 +131,14 @@ const Navbar: FC = () => {
               />
             </div>
             <div className="m-auto flex justify-between items-center w-[20%] mb-10 md:w-[40%] md:mb-5">
-              <a href="https://www.facebook.com/restoranMalaBasta?locale=hr_HR">
-                <i className="fa-brands fa-facebook text-primary text-4xl md:text-2xl hover:scale-110 hover:text-emphasis transition-all duration-300 ease-in-out"></i>
+              <a href="https://www.facebook.com/restoranMalaBasta?locale=hr_HR" target="_blank">
+                <i className="fa-brands fa-facebook text-primary text-4xl md:text-2xl hover:scale-110 hover:text-emphasis transition-all duration-300 ease-in-out">‎</i>
               </a>
-              <a href="tel: +387 63 711 520">
-                <i className="fa-solid fa-phone text-primary text-4xl md:text-2xl hover:scale-110 hover:text-emphasis transition-all duration-300 ease-in-out"></i>
+              <a href="tel: +387 63 711 520" target="_blank">
+                <i className="fa-solid fa-phone text-primary text-4xl md:text-2xl hover:scale-110 hover:text-emphasis transition-all duration-300 ease-in-out">‎</i>
               </a>
-              <a href="https://www.instagram.com/official.restoranmalabasta/">
-                <i className="fa-brands fa-instagram text-primary text-4xl md:text-2xl hover:scale-110 hover:text-emphasis transition-all duration-300 ease-in-out"></i>
+              <a href="https://www.instagram.com/official.restoranmalabasta/" target="_blank">
+                <i className="fa-brands fa-instagram text-primary text-4xl md:text-2xl hover:scale-110 hover:text-emphasis transition-all duration-300 ease-in-out">‎</i>
               </a>
             </div>
             <Split />

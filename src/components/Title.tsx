@@ -17,7 +17,7 @@ const Title: FC<TitleProps> = ({
   whileInView = "inView",
 }) => {
   return (
-    <motion.h3
+    <motion.h2
       initial={initial}
       whileInView={whileInView}
       variants={variants}
@@ -25,7 +25,7 @@ const Title: FC<TitleProps> = ({
       className={`text-4xl text-emphasis text-logo title ${className}`}
     >
       {children}
-    </motion.h3>
+    </motion.h2>
   );
 };
 
